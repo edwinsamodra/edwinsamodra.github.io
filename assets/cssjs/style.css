@@ -1,0 +1,331 @@
+/* <Welcome Page> */
+.main_welcome {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #004d40;
+    color: #fff;
+    padding: 10px;
+    margin-top: 12%;
+}
+
+.content_welcome1 {
+    background-color: #004d40;
+    color: #fff;
+    border: none;
+    text-align: center;
+}
+
+.content_welcome2 {
+    background-color: #004d40;
+    color: #fff;
+    margin-top: 5%;
+    border: none;
+    font-size: 30px;
+}
+
+.content_welcome2 a {
+    text-decoration: none;
+    color: #004d40;
+    font-family: 'Darker Grotesque', sans-serif;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 15px 30px 15px 30px;
+    font-size: 50%;
+}
+
+/* </Welcome Page> */
+
+/* <Index Page> */
+
+body {
+    margin: 0;
+}
+
+.cont {
+    display: flex;
+}
+
+.main {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* <Header> */
+.headDiv {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+.mainNav {
+    width: 100%;
+    padding-left: 37%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 50px;
+    position: fixed;
+    background-color: #004d40;
+}
+
+.mainNav p {
+    width: 30%;
+    vertical-align: center;
+    float: left;
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    font-size: 2em;
+    margin: 0;
+}
+
+.mainNav ul li {
+    width: 100%;
+    height: 60px;
+    display: inline;
+    list-style-type: none;
+}
+
+.mainNav ul li a {
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* </Header> */
+
+/* <Body> */
+.bodDiv {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+}
+
+.bodDivIsi {
+    padding-left: 35%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-top: 8%;
+}
+
+.bodDivIsi>p {
+    text-indent: 2em;
+    text-align: justify;
+    font-family: 'Mali', cursive;
+}
+
+.bodDivIsi>hr {
+    border: 1px solid #00897b;
+}
+
+.bodDivIsi>h2 {
+    font-family: 'Mali', cursive;
+}
+
+.picCont {
+    text-align: center;
+    letter-spacing: 1em;
+    margin: 0;
+}
+
+table {
+    font-family: 'Mali', cursive;
+}
+
+/* </Body> */
+
+/* <Aside> */
+.aside {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: #00695c;
+    background-size: cover;
+    flex: 1;
+    height: 100vh;
+    width: 30%;
+    padding: 5px;
+}
+
+.asideIsi {
+    margin: 25px 0 0 0;
+    padding: 10px 23px 0px 23px;
+    width: 100%;
+    border: 0;
+    text-align: center;
+    display: block;
+}
+
+.myPic {
+    width: 100%;
+    text-align: center;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+}
+
+.asideIsi h1 {
+    width: 100%;
+    text-align: center;
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+    color: #e0f2f1;
+}
+
+.asideIsi p {
+    width: 100%;
+    text-align: center;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: #e0f2f1;
+}
+
+.asideIsi i {
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    color: #e0f2f1;
+}
+
+.sosmed {
+    margin-top: 80px;
+}
+
+/* </Aside> */
+
+/* <Footer> */
+.footDiv {
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    background-color: #004d40;
+    color: #fff;
+}
+
+.footDivIsi {
+    text-align: center;
+    margin-left: 30%;
+    margin-bottom: 0;
+}
+
+.footDivIsi>p {
+    padding-top: 2%;
+    font-family: 'Mali', cursive;
+}
+
+/* </Footer> */
+/* </Index Page> */
+
+@media screen and (min-width: 361px) and (max-width: 768px) {
+    .aside {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        background-color: #00695c;
+        background-size: cover;
+        flex: 1;
+        height: 100vh;
+        width: 30%;
+        padding: 5px;
+    }
+
+    .asideIsi {
+        margin: 25px 0 0 0;
+        padding: 3%;
+        width: 100%;
+        border: 0;
+        text-align: center;
+        display: block;
+    }
+
+    .mainNav ul li {
+        display: none;
+    }
+
+    .myPic {
+        text-align: center;
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+    }
+
+    .asideIsi h1 {
+        width: 100%;
+        text-align: center;
+        text-align: center;
+        font-family: 'Assistant', sans-serif;
+        color: #e0f2f1;
+    }
+
+    .asideIsi p {
+        width: 100%;
+        text-align: center;
+        text-align: center;
+        font-family: 'Roboto Slab', serif;
+        color: #e0f2f1;
+    }
+
+    .asideIsi i {
+        width: 100%;
+        font-family: 'Roboto Slab', serif;
+        color: #e0f2f1;
+    }
+
+    .sosmed {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .content_welcome1 {
+        display: none;
+    }
+
+    .content_welcome2 {
+        text-align: center;
+        padding: 10%;
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .mainNav {
+        padding: 3%;
+    }
+
+    .mainNav p {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .mainNav ul li {
+        display: none;
+    }
+
+    .bodDivIsi {
+        padding: 3%;
+    }
+
+    .main {
+        width: 100%;
+        display: static;
+        margin: 0;
+        text-align: center;
+        float: none;
+        padding: 0;
+    }
+
+    .footDivIsi {
+        text-align: center;
+        margin-left: 3%;
+    }
+
+}
