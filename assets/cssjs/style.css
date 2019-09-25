@@ -7,7 +7,9 @@
     padding: 10px;
     margin-top: 12%;
 }
-
+li {
+    font-family: 'Mali', cursive;
+}
 .content_welcome1 {
     background-color: #004d40;
     color: #fff;
