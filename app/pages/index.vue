@@ -1,5 +1,26 @@
 <script setup lang="ts">
-const links = [
+interface Link{
+  label: string
+  icon: string
+  to: string
+  target: string
+}
+
+interface Experience {
+  role: string
+  company: string
+  period: string
+  description: string
+}
+
+interface Project {
+  title: string
+  description: string
+  tech: string[]
+  link: string
+}
+
+const links: Link[] = [
   {
     label: 'GitHub',
     icon: 'i-simple-icons-github',
@@ -26,47 +47,22 @@ const links = [
   }
 ]
 
-const experiences = [
+const experiences: Experience[] = [
   {
-    role: 'Senior Fullstack Developer',
-    company: 'Tech Company',
-    period: '2023 - Present',
-    description: 'Architecting scalable web applications and optimizing CI/CD pipelines for faster deployment cycles.'
-  },
-  {
-    role: 'System Engineer',
-    company: 'Cloud Solutions Inc',
-    period: '2021 - 2023',
-    description: 'Managed high-availability Linux server fleets and implemented infrastructure as code using Terraform.'
+    role: 'Fullstack Developer',
+    company: 'PT. Indonesia Bisnis Digital',
+    period: 'May 2023 - Present',
+    description: 'Developed a web-based operations platform acting as a UI wrapper for Proxmox, integrating Proxmox APIs through an Express.js backend and delivering a responsive frontend with Vue.js/Nuxt.'
   },
   {
     role: 'Junior Developer',
-    company: 'StartUp Lab',
-    period: '2019 - 2021',
-    description: 'Developed RESTful APIs and maintained legacy systems while migrating to modern cloud architecture.'
+    company: 'CV. Karya Hidup Sentosa',
+    period: '2019',
+    description: 'Developed ERP system modules during a 6-month internship program using CodeIgniter 3.'
   }
 ]
 
-const projects = [
-  {
-    title: 'Cloud Monitor',
-    description: 'Real-time server monitoring dashboard with alert systems.',
-    tech: ['Vue.js', 'Go', 'Prometheus', 'Grafana'],
-    link: '#'
-  },
-  {
-    title: 'AutoDeploy CLI',
-    description: 'A CLI tool to automate deployment workflows on Linux servers.',
-    tech: ['Rust', 'Docker', 'GitHub Actions'],
-    link: '#'
-  },
-  {
-    title: 'SaaS Boilerplate',
-    description: 'Production-ready SaaS starter kit with authentication and billing.',
-    tech: ['Nuxt', 'Supabase', 'Stripe', 'Tailwind'],
-    link: '#'
-  }
-]
+const projects: Project[] = []
 </script>
 
 <template>
@@ -78,12 +74,11 @@ const projects = [
           Edwin Samodra
         </h1>
         <h2 class="text-2xl font-medium text-zinc-400 sm:text-3xl">
-          Fullstack Developer & System Enthusiast
+          Fullstack Developer | Infra Enthusiast
         </h2>
       </div>
       <p class="max-w-2xl text-lg text-zinc-400 leading-relaxed">
-        I build robust applications with a deep understanding of the underlying systems.
-        Passionate about <span class="text-zinc-200 font-medium">Linux OS</span>, <span class="text-zinc-200 font-medium">DevOps</span>, and <span class="text-zinc-200 font-medium">Cloud Architecture</span>.
+        Greetings! Building applications with a full-stack perspective, from Linux systems to cloud-ready deployments.
       </p>
       <div class="flex gap-4">
         <UButton
@@ -110,7 +105,7 @@ const projects = [
 
       <div class="space-y-12 border-l border-zinc-800 ml-3 pl-10 relative">
         <div v-for="(exp, index) in experiences" :key="index" class="relative group">
-          <div class="absolute -left-[25px] top-1.5 h-4 w-4 rounded-full border-2 border-zinc-700 bg-zinc-950 group-hover:border-zinc-500 group-hover:scale-110 transition-all" />
+          <div class="absolute -left-[25px] top-1.5 h-4 w-4 group-hover:border-zinc-500 group-hover:scale-110 transition-all" />
           <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
             <h4 class="text-xl font-bold text-zinc-100 group-hover:text-primary-400 transition-colors">{{ exp.role }}</h4>
             <span class="text-sm font-mono text-zinc-500">{{ exp.period }}</span>
@@ -131,7 +126,7 @@ const projects = [
         <div class="h-px flex-1 bg-zinc-800"></div>
       </div>
 
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div v-if="projects.length > 0" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <UCard
           v-for="(project, index) in projects"
           :key="index"
@@ -165,6 +160,16 @@ const projects = [
           </template>
         </UCard>
       </div>
+
+      <div v-else class="flex flex-col items-center justify-center py-12 text-center border border-dashed border-zinc-800 rounded-xl bg-zinc-900/20">
+        <div class="p-4 rounded-full bg-zinc-900 mb-4">
+          <UIcon name="i-lucide-hammer" class="w-8 h-8 text-zinc-500" />
+        </div>
+        <h4 class="text-xl font-bold text-zinc-300 mb-2">Projects Under Construction</h4>
+        <p class="text-zinc-500 max-w-md">
+          I'm currently polishing some exciting projects to showcase here. Check back soon or visit my GitHub to see what I'm working on!
+        </p>
+      </div>
     </section>
 
     <!-- About Me -->
@@ -179,17 +184,12 @@ const projects = [
         <div class="prose prose-invert prose-zinc max-w-none">
           <p class="text-lg text-zinc-400 leading-relaxed">
             I am a <strong>Fullstack Developer</strong> who doesn't just stop at the application layer.
-            My curiosity drives me to understand the entire stack, from the kernel to the frontend.
+            My curiosity drives me to understand the entire stack, from the Linux OS to the frontend web.
+            I am constantly exploring new technologies in the <strong>Linux</strong>, <strong>DevOps Tools</strong>, and <strong>Cloud</strong> native solutions.
+            My goal is to build applications and deploy them to servers in a seamless and reliable way.
           </p>
           <p class="text-lg text-zinc-400 leading-relaxed mt-6">
-            With a strong foundation in <strong>System Engineering</strong>, I specialize in creating solutions that are not only functional but also performant, secure, and scalable.
-            I am constantly exploring new technologies in the <strong>Linux</strong> ecosystem, refining <strong>DevOps</strong> pipelines, and architecting <strong>Cloud</strong> native solutions.
-          </p>
-          <p class="text-lg text-zinc-400 leading-relaxed mt-6">
-            My goal is to bridge the gap between development and operations, ensuring that the software I build runs smoothly in production environments.
-          </p>
-          <p class="text-lg text-zinc-400 leading-relaxed mt-6">
-            If you're interested in collaborating or just want to chat, feel free to reach out on <a href="https://www.linkedin.com/in/edwinsamodra" target="_blank" rel="noopener noreferrer" class="underline">LinkedIn</a> or via <a href="mailto:hi@edwinsamodra.com" class="underline">email</a>
+            Always up for new adventures in code and creativity! Whether you're looking to collaborate or just want to say hello, I'd love to connect. Find me on <a href="https://www.linkedin.com/in/edwinsamodra" target="_blank" rel="noopener noreferrer" class="underline">LinkedIn</a> or drop me an <a href="mailto:hi@edwinsamodra.com" class="underline">email</a>
           </p>
         </div>
       </div>
