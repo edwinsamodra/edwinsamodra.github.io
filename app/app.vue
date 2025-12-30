@@ -26,8 +26,6 @@ useSeoMeta({
   title,
   description,
   robots: 'index, follow',
-  charset: 'utf-8',
-  viewport: 'width=device-width, initial-scale=1',
 
   /* ---------- Open Graph ---------- */
   ogTitle: title,
@@ -53,7 +51,7 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items = computed<NavigationMenuItem[]>(() => [{
   label: 'Home',
-  to: '/#',
+  to: '/#home',
   active: false
   }, {
   label: 'Experience',
@@ -67,67 +65,33 @@ const items = computed<NavigationMenuItem[]>(() => [{
   label: 'About',
   to: '/#about',
   active: false
-}, {
-  label: 'Contact Me',
-  to: 'mailto:hi@edwinsamodra.com',
 }])
 </script>
 
 <template>
   <UApp>
-    <UHeader>
-      <template #title>
-        <NuxtLink to="/">
-          <p class="font-extrabold text-4xl font-sans tracking-tighter subpixel-antialiased">ED</p>
-        </NuxtLink>
-      </template>
-
-      <UNavigationMenu :items="items" />
-
-      <template #right>
-        <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          color="neutral"
-          variant="ghost"
-        />
-
-        <UButton
-          to="https://www.linkedin.com/in/edwinsamodra/"
-          target="_blank"
-          icon="i-simple-icons-linkedin"
-          aria-label="LinkedIn"
-          color="neutral"
-          variant="ghost"
-        />
-      </template>
-
-      <template #body>
+    <div class="fixed top-6 inset-x-0 z-50 flex justify-center pointer-events-none">
+      <nav class="pointer-events-auto flex items-center px-2.5 py-0.5 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-full shadow-2xl shadow-zinc-950/50 ring-1 ring-white/10 overflow-x-auto max-w-[95vw]">
         <UNavigationMenu
           :items="items"
-          orientation="vertical"
-          class="w-full"
+          variant="link"
           :ui="{
-            item: 'p-1 mb-2 bg-zinc-800 rounded font-medium'
+            link: 'px-3 py-1.5 text-sm font-medium text-zinc-400 hover:text-white transition-colors rounded-full hover:bg-zinc-800/50 whitespace-nowrap',
           }"
         />
-      </template>
-    </UHeader>
+      </nav>
+    </div>
 
-    <UMain>
+    <UMain class="max-w-4xl mx-auto px-3 sm:px-4 lg:px-5 pt-24">
       <NuxtPage />
     </UMain>
 
-    <USeparator />
+    <USeparator class="max-w-4xl mx-auto px-3 sm:px-4 lg:px-5" />
 
-    <UFooter>
-      <template #default>
-        <p class="text-sm text-muted my-2">
-          © {{ new Date().getFullYear() }} · Edwin Samodra Pratama
-        </p>
-      </template>
-    </UFooter>
+    <div class="max-w-4xl mx-auto px-3 sm:px-4 lg:px-5 py-4 flex justify-center">
+      <p class="text-sm text-muted my-2">
+        © {{ new Date().getFullYear() }} · Edwin Samodra Pratama
+      </p>
+    </div>
   </UApp>
 </template>
