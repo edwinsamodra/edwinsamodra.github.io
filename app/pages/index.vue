@@ -165,7 +165,7 @@ const highlights: Highlight[] = [
         <div class="h-px flex-1 bg-zinc-800"></div>
       </div>
 
-      <div class="space-y-12 border-l border-zinc-800 ml-3 pl-10 relative">
+      <div class="space-y-12 border-l border-zinc-800 pl-4 md:pl-10 relative">
         <div v-for="(exp, index) in experiences" :key="index" class="relative group">
           <div
             class="absolute -left-[25px] top-1.5 h-4 w-4 group-hover:border-zinc-500 group-hover:scale-110 transition-all" />
@@ -235,7 +235,7 @@ const highlights: Highlight[] = [
         <div class="h-px flex-1 bg-zinc-800"></div>
       </div>
 
-      <div class="space-y-12 border-l border-zinc-800 ml-3 pl-10 relative">
+      <div class="space-y-12 border-l border-zinc-800 pl-4 md:pl-10 relative">
         <div v-for="(item, index) in highlights" :key="index" class="relative group">
           <div
             class="absolute -left-[25px] top-1.5 h-4 w-4 group-hover:border-zinc-500 group-hover:scale-110 transition-all" />
