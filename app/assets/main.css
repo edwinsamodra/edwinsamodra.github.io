@@ -4,3 +4,7 @@
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
