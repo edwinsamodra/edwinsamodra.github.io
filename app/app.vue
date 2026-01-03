@@ -17,7 +17,7 @@ useHead({
 })
 
 const title = 'Edwin Samodra Pratama | Personal Website'
-const description = 'Personal website of Edwin Samodra Pratama — full-stack developer'
+const description = 'Personal website of Edwin Samodra Pratama — full-stack developer and infrastructure enthusiast'
 const image = 'https://media.licdn.com/dms/image/v2/D5603AQGSERAYIGoZmg/profile-displayphoto-shrink_400_400/B56ZTmAY2EHQAg-/0/1739025650542?e=1768435200&v=beta&t=jL-x8E5B9CdoiD31p1EFCMmNc-gagFwXVPKPGAtvkm8'
 const url = 'https://edwinsamodra.com'
 
@@ -42,8 +42,8 @@ useSeoMeta({
   twitterTitle: title,
   twitterDescription: description,
   twitterImage: image,
-  twitterCreator: '@edwinsamodra', // hapus kalau belum punya
-  twitterSite: '@edwinsamodra'     // hapus kalau belum punya
+  twitterCreator: '@edwinsamodra',
+  twitterSite: '@edwinsamodra'
 })
 
 
@@ -53,13 +53,17 @@ const items = computed<NavigationMenuItem[]>(() => [{
   label: 'Home',
   to: '/#home',
   active: false
-  }, {
+}, {
   label: 'Experience',
   to: '/#experience',
   active: false
 }, {
-  label: 'Projects',
-  to: '/#projects',
+  label: 'Project',
+  to: '/#project',
+  active: false
+}, {
+  label: 'Highlight',
+  to: '/#highlight',
   active: false
 }, {
   label: 'About',
@@ -71,17 +75,15 @@ const items = computed<NavigationMenuItem[]>(() => [{
 <template>
   <UApp>
     <div class="fixed top-6 inset-x-0 z-50 flex justify-center pointer-events-none">
-      <nav class="pointer-events-auto flex items-center px-2.5 py-0.5 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-full shadow-2xl shadow-zinc-950/50 ring-1 ring-white/10 overflow-x-auto max-w-[95vw]">
-        <UNavigationMenu
-          :items="items"
-          variant="link"
-          :ui="{
-            link: 'px-3 py-1.5 text-sm font-medium text-zinc-400 hover:text-white transition-colors rounded-full hover:bg-zinc-800/50 whitespace-nowrap',
-          }"
-        />
+      <nav
+        class="pointer-events-auto flex items-center px-2.5 py-0.5 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-full shadow-2xl shadow-zinc-950/50 ring-1 ring-white/10 overflow-x-auto max-w-[95vw]">
+        <UNavigationMenu :items="items" variant="link" :ui="{
+          link: 'px-3 py-1.5 text-sm font-medium text-zinc-400 hover:text-white transition-colors rounded-full hover:bg-zinc-800/50 whitespace-nowrap',
+        }" />
       </nav>
     </div>
 
+    <div id="home"></div>
     <UMain class="max-w-4xl mx-auto px-3 sm:px-4 lg:px-5 pt-24">
       <NuxtPage />
     </UMain>
