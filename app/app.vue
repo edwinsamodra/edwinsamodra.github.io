@@ -62,6 +62,10 @@ const items = computed<NavigationMenuItem[]>(() => [{
   to: '/#project',
   active: false
 }, {
+  label: 'Lab',
+  to: '/#lab',
+  active: false
+}, {
   label: 'Highlight',
   to: '/#highlight',
   active: false

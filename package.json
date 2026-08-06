@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "build-static": "nuxt build --preset=static",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
