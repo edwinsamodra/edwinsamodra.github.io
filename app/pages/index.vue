@@ -295,7 +295,7 @@ function getEmbedUrl(url?: string) {
       <div v-if="projects.length > 0" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <UCard v-for="(project, index) in projects" :key="index"
           class="bg-zinc-900/30 border-zinc-800 hover:border-zinc-600 hover:bg-zinc-900/50 transition-all duration-300 group flex flex-col overflow-hidden cursor-pointer"
-          :ui="{ body: 'p-0 flex flex-col flex-1' }" @click="openDetails(project)">
+          :ui="{ body: 'p-0 sm:p-2 sm:pt-4 flex flex-col flex-1' }" @click="openDetails(project)">
 
           <!-- Thumbnail Header if available -->
           <div v-if="project.thumbnail"
