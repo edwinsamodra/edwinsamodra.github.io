@@ -164,6 +164,19 @@ const projects: Project[] = [
     tech: ['Vite', 'Vue.js', 'Nuxt.js', 'Tailwind CSS', 'NuxtUI'],
     thumbnail: '/images/projects/personal-website.png',
     link: 'https://edwinsamodra.com'
+  },
+  {
+    title: 'Phishing Simulator',
+    period: 'JUL 2026',
+    description: 'A custom tool for phishing simulation designed for security awareness and training.',
+    details: [
+      'Developed a custom phishing simulation tool to conduct simulated phishing campaigns for security awareness and testing.',
+      'Configured backend services and HTTP handlers for managing simulation campaigns and tracking metrics.',
+      'Designed modular project structure using Go.'
+    ],
+    tech: ['Go', 'html/template', 'SQLite'],
+    thumbnail: '/images/projects/phishing-simulator.png',
+    link: 'https://github.com/edwinsamodra/phishing-simulator'
   }
 ]
 
