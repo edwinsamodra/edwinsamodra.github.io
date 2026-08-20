@@ -29,3 +29,4 @@ Software Engineer with 4+ years of programming experience, experienced in workin
 - **zetup** `(Private)` - Automated system setup & deployment platform `Vue.js` `TypeScript` `Node.js`
 
 _visit [edwinsamodra.github.io](https://edwinsamodra.github.io) or explore my repositories to see even more.._
+
