@@ -8,11 +8,35 @@ const description = 'An interactive tracker for Edwin Samodra\'s hands-on learni
 useSeoMeta({
   title,
   description,
+  keywords: 'Proxmox Homelab, LFCS Linux Administration, GitOps, Kubernetes, ArgoCD, Ansible, Terraform, OpenTofu, learning tracker, Edwin Samodra',
   ogTitle: title,
   ogDescription: description,
+  ogUrl: 'https://edwinsamodra.com/labs',
   ogType: 'website',
   twitterTitle: title,
   twitterDescription: description
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://edwinsamodra.com/labs' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'name': 'Learning Labs & Learning Tracker',
+        'description': 'An interactive tracker for Edwin Samodra\'s hands-on learning labs, detailing Proxmox homelab, LFCS linux admin, infrastructure as code, and Kubernetes GitOps.',
+        'url': 'https://edwinsamodra.com/labs',
+        'author': {
+          '@type': 'Person',
+          'name': 'Edwin Samodra Pratama'
+        }
+      })
+    }
+  ]
 })
 
 // States for search and filters

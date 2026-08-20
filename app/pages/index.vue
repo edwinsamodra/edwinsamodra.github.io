@@ -231,6 +231,58 @@ function getEmbedUrl(url?: string) {
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/)
   return match ? `https://www.youtube-nocookie.com/embed/${match[1]}` : url
 }
+
+// Define SEO Metadata for the home page
+const pageTitle = 'Edwin Samodra Pratama | Fullstack Developer & Infrastructure Enthusiast'
+const pageDescription = 'Portfolio of Edwin Samodra Pratama, a Fullstack Developer and Infrastructure Enthusiast specializing in Node.js, Express, Vue.js, Go, Debian server setups, and Proxmox virtualization.'
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDescription,
+  keywords: 'Edwin Samodra Pratama, Fullstack Developer, Infrastructure Enthusiast, Proxmox Homelab, Node.js, Express, Go, Vue.js, IT Specialist Indonesia',
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: 'https://edwinsamodra.com/',
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://edwinsamodra.com/' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': 'Edwin Samodra Pratama',
+        'jobTitle': 'Fullstack Developer & Infrastructure Enthusiast',
+        'url': 'https://edwinsamodra.com',
+        'sameAs': [
+          'https://github.com/edwinsamodra',
+          'https://linkedin.com/in/edwinsamodra',
+          'https://medium.com/@edwinsamodra'
+        ],
+        'knowsAbout': [
+          'Full-stack Web Development',
+          'Node.js',
+          'Express.js',
+          'Vue.js',
+          'Go',
+          'Linux System Administration (LFCS)',
+          'Proxmox VE Virtualization',
+          'DevOps & Infrastructure Automation'
+        ],
+        'worksFor': {
+          '@type': 'Organization',
+          'name': 'PT. Indonesia Bisnis Digital'
+        }
+      })
+    }
+  ]
+})
 </script>
 
 <template>
@@ -251,7 +303,7 @@ function getEmbedUrl(url?: string) {
       </p>
       <div class="flex gap-4">
         <UButton v-for="link in links" :key="link.label" :icon="link.icon" :to="link.to" :target="link.target"
-          color="neutral" variant="ghost" size="xl" class="hover:bg-zinc-800" />
+          :aria-label="link.label" color="neutral" variant="ghost" size="xl" class="hover:bg-zinc-800" />
       </div>
     </section>
 
