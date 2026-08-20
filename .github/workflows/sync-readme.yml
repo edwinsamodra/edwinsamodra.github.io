@@ -1,0 +1,36 @@
+name: Sync README to profile repo
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Website Repo
+        uses: actions/checkout@v4
+
+      - name: Checkout Profile Repo
+        uses: actions/checkout@v4
+        with:
+          repository: edwinsamodra/edwinsamodra
+          token: ${{ secrets.SYNC_README_TOKEN }}
+          path: profile-repo
+
+      - name: Sync and Commit README
+        run: |
+          cp README.md profile-repo/README.md
+          cd profile-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [[ -n $(git status --porcelain README.md) ]]; then
+            git add README.md
+            git commit -m "sync: update README.md from edwinsamodra.github.io (CI)"
+            git push origin main
+          else
+            echo "No changes detected, skipping push."
+          fi
