@@ -1,0 +1,148 @@
+links:
+  - label: GitHub
+    icon: i-simple-icons-github
+    to: https://github.com/edwinsamodra
+    target: _blank
+  - label: LinkedIn
+    icon: i-simple-icons-linkedin
+    to: https://linkedin.com/in/edwinsamodra
+    target: _blank
+  - label: Medium
+    icon: i-simple-icons-medium
+    to: https://medium.com/@edwinsamodra
+    target: _blank
+  - label: Email
+    icon: i-lucide-mail
+    to: mailto:hi@edwinsamodra.com
+    target: _blank
+
+experiences:
+  - role: Fullstack Developer
+    company: PT. Indonesia Bisnis Digital
+    period: May 2023 - Present
+    subExperiences:
+      - role: Product Support
+        period: May 2026 - Present
+        description:
+          - Authored technical documentation, user manuals, and internal development briefs to bridge the communication gap between the CTO and the management team.
+          - Facilitated transparency by reporting on the product roadmap, development milestones, and technical hurdles to non-technical stakeholders (not responsible for defining product vision).
+      - role: Fullstack Developer (IndoBSD Bills)
+        period: Jan 2026 - Apr 2026
+        description:
+          - Developed a License Key Generator/Billing System (IndoBSD Bills) to automate NOCS software license issuance.
+          - Built a billing module for managing customer purchases, invoices, and license activation.
+          - Designed and developed both frontend, backend features and database schema for the application.
+          - Performed application deployment and server setup on a Debian with PM2 and NGINX.
+          - Developed independently, covering the complete software development lifecycle—from application design and implementation to deployment and production infrastructure setup.
+          - 'Tech Stack: Node.js, Express.js, and EJS'
+      - role: Fullstack Developer (Proxmox Manager Dashboard)
+        period: May 2023 - Dec 2025
+        description:
+          - Developed a custom full-stack Proxmox Manager dashboard integrated infrastructure monitoring.
+          - Implemented automation (CI/CD) in Git-based, fully-integrated platform, to streamline the development-to-deployment workflow.
+          - Performed application deployment and server setup on a Debian with PM2 and NGINX.
+          - 'Tech Stack: Node.js, Express.js, and Vite/Vue.js'
+  - role: Software Tester
+    company: Fata Organa
+    period: Jun 2025 - Oct 2025
+    description:
+      - Created and documented 1000+ detailed manual test cases based on functional requirements and business processes
+      - Executed test cases thoroughly to identify bugs, inconsistencies, and edge cases
+      - Collaborated closely with developers and project managers to clarify requirements, reproduce issues, and validate fixes
+      - Contributed to improving QA documentation and reporting standards within the testing cycle
+  - role: Junior Developer
+    company: CV. Karya Hidup Sentosa
+    period: '2019'
+    description:
+      - Developed ERP system modules during a 6-month internship program using CodeIgniter 3
+      - Collaborate across departments to discuss features to be implemented
+
+projects:
+  - title: IndoBSD Bills
+    period: JAN 2026 - APR 2026
+    description: License Key Generator & Billing System to automate NOCS software license issuance, email notifications, and customer billing.
+    details:
+      - Developed a License Key Generator/Billing System (IndoBSD Bills) to automate NOCS software license issuance.
+      - Developed email notifications for license delivery and billing-related events.
+      - Implemented Role-Based Access Control (RBAC) for Admin and Customer roles.
+      - Built a billing module for managing customer purchases, invoices, and license activation.
+      - Designed and developed both frontend, backend features and database schema for the application.
+      - Performed application deployment and server setup on a Debian with PM2 and NGINX.
+      - This project was developed independently, covering the complete software development lifecycle—from application design and implementation to deployment and production infrastructure setup.
+    tech:
+      - Node.js
+      - Express.js
+      - EJS
+      - Debian
+      - PM2
+      - NGINX
+    thumbnail: /images/projects/indobsd-bills.png
+    youtubeUrl: https://youtu.be/hKCBBFrTyng
+    link: https://billing.indobsd.id/
+  - title: Zetoup
+    period: MAY 2023 - DEC 2025
+    description: A custom full-stack Proxmox Manager dashboard integrated with infrastructure monitoring and automated Git-based CI/CD workflows.
+    details:
+      - Developed a custom full-stack Proxmox Manager dashboard, for multi cluster, multi standalone nodes, integrated infrastructure monitoring.
+      - Implemented automation (CI/CD) in Gitlab, fully-integrated platform, to streamline the development-to-deployment workflow.
+      - Performed application deployment and server setup on a Debian with PM2 and NGINX.
+    tech:
+      - Node.js
+      - Express.js
+      - Vite
+      - Vue.js
+      - Proxmox VE
+      - Debian
+      - PM2
+      - NGINX
+    thumbnail: /images/projects/zetoup.png
+    youtubeUrl: https://youtu.be/a7aM1lt_weY
+  - title: Personal Website
+    period: JAN 2026
+    description: A personal portfolio website built with Nuxt, Vue.js, Tailwind CSS, and Nuxt UI.
+    tech:
+      - Vite
+      - Vue.js
+      - Nuxt.js
+      - Tailwind CSS
+      - NuxtUI
+    thumbnail: /images/projects/personal-website.png
+    link: https://edwinsamodra.com
+  - title: Phishing Simulator
+    period: JUL 2026
+    description: A custom tool for phishing simulation designed for security awareness and training.
+    details:
+      - Developed a custom phishing simulation tool to conduct simulated phishing campaigns for security awareness and testing.
+      - Configured backend services and HTTP handlers for managing simulation campaigns and tracking metrics.
+      - Designed modular project structure using Go.
+    tech:
+      - Go
+      - html/template
+      - SQLite
+    thumbnail: /images/projects/phishing-simulator.png
+    link: https://github.com/edwinsamodra/phishing-simulator
+
+highlights:
+  - title: Self Learning in DevOps and Cloud
+    period: Nov 2024 - Present
+    description:
+      - Deepening DevOps fundamentals through hands-on, community-based learning, with a strong focus on Linux system administration
+      - Continue to develop cloud-native skills by actively engaging in the community and self-learning in the learning platforms
+  - title: AWS re/Start Program Participant
+    period: Apr 2025 - Aug 2025
+    description:
+      - Completed an intensive 3-month bootcamp designed by AWS, featuring daily live sessions and hands-on labs with real AWS services
+      - Gained practical cloud computing experience through curriculum provided by AWS Training & Certification and Orbit Future Academy
+      - Successfully earned the AWS Certified Cloud Practitioner (CCP) certification in August 2025
+  - title: MSIB Back End Engineering Student
+    period: Feb 2023 - Jul 2023
+    description:
+      - Participated in the MSIB Program at Ruangguru, mastering Golang fundamentals and building REST APIs and Deployed applications to PaaS environments, gaining hands-on experience in cloud deployment workflows
+      - Selected as an Assistant Mentor to guide fellow students, recognized for leadership and ability to explain complex concepts
+      - Consistently showcased strong problem-solving skills and active contribution during technical discussions
+  - title: Brawijaya University Student
+    period: 2020 - 2024
+    description:
+      - Graduated with a Bachelor's degree in Information Technology Edu. in under four years with a 3.74 GPA
+      - Actively involved in organizations and community initiatives, with an IT background supporting event operations
+      - Served as a Practicum Assistant, mentoring junior students in fundamental programming & operating system concepts

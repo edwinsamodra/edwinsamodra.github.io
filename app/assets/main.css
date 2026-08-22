@@ -2,9 +2,83 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: "Public Sans", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+:root:not(.dark) {
+  --ui-bg: #f5f5f5;
+}
+
+html,
+body {
+  transition:
+    background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  transition-property:
+    background-color, border-color, color, fill, stroke, box-shadow,
+    text-decoration-color;
+  transition-duration: 500ms !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Houdini CSS Custom Properties registration to make CSS Variable color transitions smooth */
+@property --ui-bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+@property --ui-bg-accented {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+@property --ui-bg-elevated {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+@property --ui-bg-muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+@property --ui-border {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+@property --ui-border-muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+@property --ui-text {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+@property --ui-text-dimmed {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+@property --ui-text-muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+@property --ui-text-toned {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
 }
