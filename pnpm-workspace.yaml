@@ -1,13 +1,8 @@
 allowBuilds:
-  esbuild: set this to true or false
-  unrs-resolver: set this to true or false
-  vue-demi: set this to true or false
-  workerd: set this to true or false
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
-  - unrs-resolver
-  - vue-demi
+  esbuild: true
+  unrs-resolver: true
+  vue-demi: true
+  workerd: true
 minimumReleaseAgeExclude:
   - '@iconify-json/lucide@1.2.125'
   - '@nuxt/ui@4.11.0'
