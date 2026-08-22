@@ -1,4 +1,4 @@
-Full-Stack Developer with 3+ years of experience building and maintaining web applications using Vue.js, React.js, and Node.js. Experienced in developing features end-to-end Javascript Web Application, from translating product requirements into technical solutions to implementation, deployment, and maintenance.
+Full-Stack Developer with 3+ years of experience building and maintaining web applications using Vue.js, React.js, and Node.js. Experienced in end-to-end JavaScript development for small to med-sized web apps, spanning requirements gathering, implementation, deployment, and maintenance. Leveraging Agentic AI Coding to streamline workflows, boost productivity, and deliver high-quality software efficiently.
 
 Comfortable working across the frontend and backend, with a strong focus on writing maintainable code and building reliable products. Looking to contribute as Backend Engineer Specialist at B2C SaaS Company (Go Native) implementing DevSecOps practices and building great products in a team that values ownership, practical problem-solving, and continuous improvement.
 

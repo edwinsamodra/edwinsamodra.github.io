@@ -26,7 +26,12 @@ experiences:
         description:
           - Authored technical documentation, user manuals, and internal development briefs to bridge the communication gap between the CTO and the management team.
           - Facilitated transparency by reporting on the product roadmap, development milestones, and technical hurdles to non-technical stakeholders (not responsible for defining product vision).
-      - role: Fullstack Developer (IndoBSD Bills)
+      - role: Web Phishing Simulator
+        period: Jul 2026 - Aug 2026
+        description:
+          - Developed a phishing simulation tool for security awareness and training.
+          - Using Golang, Docker, and MariaDB.
+      - role: IndoBSD Bills
         period: Jan 2026 - Apr 2026
         description:
           - Developed a License Key Generator/Billing System (IndoBSD Bills) to automate NOCS software license issuance.
@@ -35,7 +40,7 @@ experiences:
           - Performed application deployment and server setup on a Debian with PM2 and NGINX.
           - Developed independently, covering the complete software development lifecycle—from application design and implementation to deployment and production infrastructure setup.
           - 'Tech Stack: Node.js, Express.js, and EJS'
-      - role: Fullstack Developer (Proxmox Manager Dashboard)
+      - role: Proxmox Manager Dashboard
         period: May 2023 - Dec 2025
         description:
           - Developed a custom full-stack Proxmox Manager dashboard integrated infrastructure monitoring.

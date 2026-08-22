@@ -23,7 +23,7 @@ const pageDescription = 'Portfolio of Edwin Samodra Pratama, a Fullstack Develop
 useSeoMeta({
   title: pageTitle,
   description: pageDescription,
-  keywords: 'Edwin Samodra Pratama, Fullstack Developer, Infrastructure Enthusiast, Proxmox Homelab, Node.js, Express, Go, Vue.js, IT Specialist Indonesia',
+  keywords: 'Edwin Samodra Pratama, Fullstack Developer, DevOps, Node.js, Express.js, Go, Vue.js',
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogUrl: 'https://edwinsamodra.com/',
@@ -117,12 +117,11 @@ const isDark = computed({
           </ClientOnly>
         </div>
         <h2 class="text-2xl font-medium text-zinc-600 dark:text-zinc-400 sm:text-3xl">
-          Fullstack Developer | Infra Enthusiast
+          Full Stack Developer | Cloud & DevOps
         </h2>
       </div>
-      <p class="max-w-2xl text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-        Greetings! I'm a full-stack developer who loves building great apps and making sure they get to the server
-        without a hitch.
+      <p class="max-w-3xl text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+        Experienced in end-to-end JavaScript development for small to med-sized web apps, spanning requirements gathering, implementation, deployment, and maintenance. Leveraging Agentic AI Coding to streamline workflows, boost productivity, and deliver high-quality software efficiently.
       </p>
       <div class="flex gap-4">
         <UButton
